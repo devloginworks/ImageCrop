@@ -1,0 +1,74 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context="com.loginworks.imagecropdemo.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Select Image"
+        android:textColor="#ffff"
+        android:textSize="20dp" />
+
+    <com.loginworks.imagecropdemo.ZoomImageView
+        android:id="@+id/result_image"
+        android:layout_width="match_parent"
+        android:layout_height="418dp"
+        android:scaleType="fitStart" />
+
+    <RelativeLayout
+        android:id="@+id/rel_tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        android:paddingBottom="20dp">
+
+        <ImageView
+            android:id="@+id/image_rotateLeft"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/ic_rotate_left_black_24dp" />
+
+        <ImageView
+            android:id="@+id/image_rotateRight"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/image_rotateLeft"
+            android:src="@drawable/ic_rotate_right_black_24dp" />
+
+        <ImageView
+            android:id="@+id/image_mirror"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/image_rotateRight"
+            android:src="@drawable/ic_compare_black_24dp" />
+
+        <ImageView
+            android:id="@+id/image_crop"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/image_mirror"
+            android:src="@drawable/ic_crop_black_24dp" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/edit_float"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginTop="10dp"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:src="@drawable/ic_create_black_24dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:elevation="10dp"
+        app:fabSize="auto" />
+
+</FrameLayout>
